@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.local
+.env
+.env.local
+.env.*.local
+*.log
+*.tsbuildinfo
+.worktrees/
+
+# ClearGate planning system + agent harness — internal only, not part of the published package
+.cleargate/
+.claude/
+.mcp.json
+MANIFEST.json

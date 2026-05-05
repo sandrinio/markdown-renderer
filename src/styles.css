@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import "@milkdown/crepe/theme/common/style.css";
+@import "@milkdown/crepe/theme/frame.css";
+
+/* Code-block readability overrides: Crepe's frame theme leaves CodeMirror
+   line-number/syntax tokens at low contrast against the surface. */
+.milkdown .milkdown-code-block {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+.milkdown .milkdown-code-block .cm-editor,
+.milkdown .milkdown-code-block .cm-gutters {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.milkdown .milkdown-code-block .cm-content {
+  color: #1f2937;
+  caret-color: #111827;
+}
+
+.milkdown .milkdown-code-block .cm-gutters {
+  border-right: 1px solid #d1d5db;
+  color: #6b7280;
+}
+
+.milkdown .milkdown-code-block .cm-lineNumbers .cm-gutterElement {
+  color: #6b7280;
+  padding: 0 8px;
+}
+
+.milkdown .milkdown-code-block .cm-activeLine,
+.milkdown .milkdown-code-block .cm-activeLineGutter {
+  background: #e5e7eb;
+}
+
+/* Inline code: tighten contrast and drop the bright-red token color. */
+.milkdown :not(pre) > code {
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.92em;
+}
